@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: sans-serif;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
@@ -54,6 +55,19 @@ const GlobalStyle = createGlobalStyle`
   }
   img {
     max-width: 100%;
+  }
+  h1 {
+    font-size: ${p => p.theme.fontSizes["xxxl"]}
+  }
+  h2 {
+    font-size: ${p => p.theme.fontSizes["xxl"]}
+  }
+  h3 {
+    font-size: ${p => p.theme.fontSizes["xl"]}
+  }
+  p {
+    font-size: ${p => p.theme.fontSizes["l"]};
+    font-weight: 100;
   }
 `;
 

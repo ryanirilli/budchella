@@ -7,6 +7,7 @@ import budchellaIntro from "../budchella-intro.json";
 
 const Container = React.forwardRef((p, ref) => <E {...p} ref={ref} />);
 const Content = React.forwardRef((p, ref) => <E {...p} ref={ref} />);
+const Title = React.forwardRef((p, ref) => <E {...p} ref={ref} />);
 
 const intObsOpts = {
   threshold: [0.5],
@@ -35,6 +36,9 @@ const Home = () => {
       <Container fullPage centerContent>
         <Content>
           <div ref={introRef} />
+          <Title align="center" as="p">
+            Budchella 2020
+          </Title>
         </Content>
       </Container>
       <Container ref={sectionOneRef} fullPage />
