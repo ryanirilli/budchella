@@ -27,6 +27,10 @@ const fontSizes = {
   xxxl: "3.052rem"
 };
 
+const fonts = {
+  primary: `"Montserrat", sans-serif`
+};
+
 const fontWeights = {
   normal: 100,
   semiBold: 600,
@@ -97,6 +101,7 @@ export default {
   spacing,
   containerWidths,
   zIndices,
+  fonts,
   fontSizes,
   fontWeights,
   shadows,

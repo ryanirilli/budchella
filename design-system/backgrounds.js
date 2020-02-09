@@ -11,6 +11,8 @@ const _background = p => {
     css`
       background-image: url(${p.bgImage});
       background-size: ${p.bgSize || "cover"};
+      background-repeat: ${p.bgRepeat || "no-repeat"};
+      background-position: ${p.bgPosition || "top"};
     `;
   return [color, image];
 };

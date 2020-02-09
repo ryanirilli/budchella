@@ -2,6 +2,7 @@ import React from "react";
 import NextApp from "next/app";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from "../theme";
+import { pageFont } from "../design-system/typography";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -27,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
-    font-family: sans-serif;
+    vertical-align: baseline; 
+    ${pageFont};   
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 

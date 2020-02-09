@@ -19,6 +19,10 @@ export default class Document extends NextDocument {
         styles: (
           <>
             {initialProps.styles}
+            <link
+              href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto+Slab:300,400&display=swap"
+              rel="stylesheet"
+            />
             {sheet.getStyleElement()}
           </>
         )
