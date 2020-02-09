@@ -9,17 +9,24 @@ import budchellaIntro from "../budchella-intro.json";
 const Wrapper = makeStyledComponent();
 const Container = makeStyledComponent();
 const Content = makeStyledComponent();
+const Title = makeStyledComponent();
 const Top = makeStyledComponent();
+const TopContent = makeStyledComponent();
+const SectionOne = styled(Container)`
+  transform: translateY(-1px);
+`;
 const Logo = styled(makeStyledComponent())`
   max-width: 100px;
   margin-right: 16px;
   transform: translateY(-2px);
 `;
+
+const BandContent = makeStyledComponent();
 const Bands = styled(makeStyledComponent())`
-  max-width: 500px;
+  max-width: 100%;
 `;
 const AnimationContainer = styled(makeStyledComponent())`
-  max-width: 100%;
+  width: 100%;
 `;
 
 const intObsOpts = {
@@ -63,21 +70,21 @@ const Home = () => {
         bgColor={bgColor}
         transition="background"
       >
-        <Top
-          absolute="top,left"
-          fontColor="white"
-          l={{
-            paddingTop: "xl",
-            paddingSides: "xl"
-          }}
-          m={{
-            paddingTop: "l",
-            paddingSides: "l"
-          }}
-          flex
-          flexAlignCenter
-        >
-          <Logo as="img" src="./budchella-logo.svg" /> <div>Mar 27 - 29</div>
+        <Top absolute="top,left" fontColor="white">
+          <TopContent
+            flex
+            flexAlignCenter
+            l={{
+              paddingTop: "xl",
+              paddingSides: "xl"
+            }}
+            m={{
+              paddingTop: "l",
+              paddingSides: "l"
+            }}
+          >
+            <Logo as="img" src="./budchella-logo.svg" /> <div>Mar 27 & 28</div>
+          </TopContent>
         </Top>
         <Container
           fullPage
@@ -90,11 +97,20 @@ const Home = () => {
             <AnimationContainer ref={introRef} />
           </Content>
         </Container>
-        <Container ref={sectionOneRef} fullPage centerContent bgColor="white">
-          <Content>
+        <SectionOne ref={sectionOneRef} fullPage centerContent bgColor="white">
+          <BandContent paddingSides="xl" paddingBottom="xxl">
+            <Title
+              align="center"
+              as="h2"
+              bold
+              paddingTop="xxl"
+              paddingBottom="xl"
+            >
+              LINEUP
+            </Title>
             <Bands as="img" src="/budchella-bands.svg" />
-          </Content>
-        </Container>
+          </BandContent>
+        </SectionOne>
         <Container ref={sectionTwoRef} fullPage />
       </Wrapper>
     </>

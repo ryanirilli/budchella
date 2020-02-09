@@ -33,8 +33,7 @@ const fonts = {
 
 const fontWeights = {
   normal: 100,
-  semiBold: 600,
-  bold: 800
+  bold: 600
 };
 
 const containerWidths = {

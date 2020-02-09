@@ -23,7 +23,13 @@ const _font = p => {
     css`
       color: ${p.theme.colors[p.fontColor] || p.fontColor};
     `;
-  return [fontFam, fontColor];
+
+  const weight =
+    p.bold &&
+    css`
+      font-weight: ${p.theme.fontWeights.bold};
+    `;
+  return [fontFam, fontColor, weight];
 };
 
 export const font = p => p.theme.makeResponsive(p, _font);
