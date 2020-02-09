@@ -19,3 +19,19 @@ const _centerContent = p =>
   `;
 
 export const centerContent = p => p.theme.makeResponsive(p, _centerContent);
+
+export const _flex = p => {
+  const display =
+    p.flex &&
+    css`
+      display: flex;
+    `;
+  const align =
+    p.flexAlignCenter &&
+    css`
+      align-items: center;
+    `;
+  return [display, align];
+};
+
+export const flex = p => p.theme.makeResponsive(p, _flex);

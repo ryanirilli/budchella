@@ -1,16 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
 import Head from "next/head";
-import { E } from "../design-system";
+import { makeStyledComponent } from "../design-system";
 import { useInView } from "react-intersection-observer";
 import lottie from "lottie-web";
 import budchellaIntro from "../budchella-intro.json";
 
-const Wrapper = React.forwardRef((p, ref) => <E {...p} ref={ref} />);
-const Container = React.forwardRef((p, ref) => <E {...p} ref={ref} />);
-const Content = React.forwardRef((p, ref) => <E {...p} ref={ref} />);
+const Wrapper = makeStyledComponent();
+const Container = makeStyledComponent();
+const Content = makeStyledComponent();
+const Top = makeStyledComponent();
+const Logo = styled(makeStyledComponent())`
+  max-width: 100px;
+  margin-right: 16px;
+`;
 
 const intObsOpts = {
-  threshold: [0.5],
+  threshold: [0.25],
   triggerOnce: false
 };
 
@@ -37,7 +43,7 @@ const Home = () => {
     ? "#022859"
     : isSectionTwoInView
     ? "#000000"
-    : "#F7B31F";
+    : "#000000";
 
   return (
     <>
@@ -50,6 +56,22 @@ const Home = () => {
         bgColor={bgColor}
         transition="background"
       >
+        <Top
+          absolute="top,left"
+          fontColor="white"
+          l={{
+            paddingTop: "xl",
+            paddingSides: "xl"
+          }}
+          m={{
+            paddingTop: "l",
+            paddingSides: "l"
+          }}
+          flex
+          flexAlignCenter
+        >
+          <Logo as="img" src="./budchella-logo.svg" /> <div>Mar 27-29</div>
+        </Top>
         <Container
           fullPage
           centerContent

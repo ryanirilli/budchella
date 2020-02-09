@@ -13,12 +13,17 @@ export const align = p => p.theme.makeResponsive(p, _align);
 
 const _font = p => {
   const val = p.theme.fonts[p.font] || p.theme.fonts.primary;
-  return (
+  const fontFam =
     p.font &&
     css`
       font-family: ${val};
-    `
-  );
+    `;
+  const fontColor =
+    p.fontColor &&
+    css`
+      color: ${p.theme.colors[p.fontColor] || p.fontColor};
+    `;
+  return [fontFam, fontColor];
 };
 
 export const font = p => p.theme.makeResponsive(p, _font);
