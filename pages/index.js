@@ -13,6 +13,13 @@ const Top = makeStyledComponent();
 const Logo = styled(makeStyledComponent())`
   max-width: 100px;
   margin-right: 16px;
+  transform: translateY(-2px);
+`;
+const Bands = styled(makeStyledComponent())`
+  max-width: 500px;
+`;
+const AnimationContainer = styled(makeStyledComponent())`
+  max-width: 100%;
 `;
 
 const intObsOpts = {
@@ -40,7 +47,7 @@ const Home = () => {
   }, []);
 
   const bgColor = isSectionOneInView
-    ? "#022859"
+    ? "#F7B31F"
     : isSectionTwoInView
     ? "#000000"
     : "#000000";
@@ -70,7 +77,7 @@ const Home = () => {
           flex
           flexAlignCenter
         >
-          <Logo as="img" src="./budchella-logo.svg" /> <div>Mar 27-29</div>
+          <Logo as="img" src="./budchella-logo.svg" /> <div>Mar 27 - 29</div>
         </Top>
         <Container
           fullPage
@@ -80,10 +87,14 @@ const Home = () => {
           bgPosition="bottom"
         >
           <Content>
-            <div ref={introRef} />
+            <AnimationContainer ref={introRef} />
           </Content>
         </Container>
-        <Container ref={sectionOneRef} fullPage bgColor="white" />
+        <Container ref={sectionOneRef} fullPage centerContent bgColor="white">
+          <Content>
+            <Bands as="img" src="/budchella-bands.svg" />
+          </Content>
+        </Container>
         <Container ref={sectionTwoRef} fullPage />
       </Wrapper>
     </>
