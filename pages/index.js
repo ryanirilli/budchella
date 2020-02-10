@@ -90,9 +90,10 @@ const Home = ({ theme }) => {
         <Container
           fullPage
           centerContent
-          bgImage="./background.svg"
           bgSize="contain"
           bgPosition="bottom"
+          m={{ bgImage: "/background-no-center-dots.svg" }}
+          l={{ bgImage: "/background.svg" }}
         >
           <Content>
             <AnimationContainer ref={introRef} />
@@ -118,14 +119,16 @@ const Home = ({ theme }) => {
             <img src="/venue.jpg" />
           </Container>
           <VenueContent
-            paddingEnds="xl"
-            m={{ paddingSides: "l" }}
-            l={{ paddingSides: "0" }}
+            m={{ paddingSides: "l", paddingTop: "xl", paddingBottom: "xxl" }}
+            l={{
+              paddingSides: "0",
+              paddingEnds: "xl"
+            }}
           >
             <Text as="h2" bold paddingBottom="l">
               VENUE
             </Text>
-            <Text as="p" paddingBottom="l" maxWidth={350}>
+            <Text as="p" paddingBottom="xl" maxWidth={350}>
               Tucked away in Index Washington is the ultimate backdrop for the
               sonic utopia that is Budchella. Soak in the hot tub during the day
               and vibe in total bliss in the night at America's best
@@ -169,7 +172,12 @@ const Home = ({ theme }) => {
             l={{ paddingSides: "0", paddingEnds: "0" }}
           >
             <Container align="center">
-              <Text as="h3" bold>
+              <Text
+                as="h3"
+                bold
+                m={{ paddingBottom: "m" }}
+                l={{ paddingBottom: "0" }}
+              >
                 Official Budchella Playlist
               </Text>
               <Text as="p">just puttin out those vibes.</Text>
