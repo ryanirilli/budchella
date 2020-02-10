@@ -15,16 +15,14 @@ const TopContent = makeStyledComponent();
 const VenueContent = makeStyledComponent();
 const LearnMoreButton = makeStyledComponent();
 const SectionOne = styled(Container)`
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 `;
 const Logo = styled(makeStyledComponent())`
   max-width: 150px;
   margin-right: 16px;
   transform: translateY(-2px);
 `;
-const Bands = styled(makeStyledComponent())`
-  max-width: 350px;
-`;
+const Bands = makeStyledComponent();
 const AnimationContainer = styled(makeStyledComponent())`
   width: 100%;
 `;
@@ -90,10 +88,9 @@ const Home = ({ theme }) => {
         <Container
           fullPage
           centerContent
-          bgSize="contain"
           bgPosition="bottom"
-          m={{ bgImage: "/background-no-center-dots.svg" }}
-          l={{ bgImage: "/background.svg" }}
+          m={{ bgImage: "/background-no-center-dots.svg", bgSize: "contain" }}
+          l={{ bgImage: "/background.svg", bgSize: "cover" }}
         >
           <Content>
             <AnimationContainer ref={introRef} />
@@ -163,6 +160,10 @@ const Home = ({ theme }) => {
               frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"
+              m={{ paddingEnds: "xl" }}
+              l={{
+                paddingEnds: "0"
+              }}
             />
           </Container>
           <Container
