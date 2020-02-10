@@ -75,6 +75,7 @@ const gray400 = "#484746";
 const gray500 = "#4c4948";
 const gray600 = "#312f2f";
 const black = "#000000";
+const yellow = "#F7B31F";
 
 const colors = {
   main,
@@ -88,7 +89,8 @@ const colors = {
   gray400,
   gray500,
   gray600,
-  black
+  black,
+  yellow
 };
 
 const shadows = {

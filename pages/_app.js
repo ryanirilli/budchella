@@ -56,6 +56,7 @@ const GlobalStyle = createGlobalStyle`
   }
   img {
     max-width: 100%;
+    display: block;
   }
   h1 {
     font-size: ${p => p.theme.fontSizes["xxxl"]}
@@ -67,9 +68,19 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${p => p.theme.fontSizes["xl"]}
   }
   p {
-    font-size: ${p => p.theme.fontSizes["l"]};
+    font-size: ${p => p.theme.fontSizes["s"]};
     font-weight: 100;
+    line-height: 1.6em;
   }
+  button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;  
+    cursor: pointer;
+  }
+  button:focus {outline:0;}
 `;
 
 export default class App extends NextApp {

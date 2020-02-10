@@ -7,6 +7,9 @@ import { align, font } from "./typography";
 import { visibility } from "./visibility";
 import { transition } from "./transitions";
 import { position } from "./positions";
+import { grid } from "./grid";
+import { widths } from "./widths";
+import { button } from "./buttons";
 
 export const E = styled.div`
   ${fullPage}
@@ -19,6 +22,9 @@ export const E = styled.div`
   ${transition}
   ${position}
   ${flex}
+  ${grid}
+  ${widths}
+  ${button}
 `;
 
 export const makeStyledComponent = () =>
