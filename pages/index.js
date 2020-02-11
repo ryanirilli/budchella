@@ -146,9 +146,8 @@ const Home = ({ theme }) => {
         <Container
           bgColor="black"
           grid
-          colSpacing="l"
           m={{ cols: "1fr" }}
-          l={{ cols: "300px 1fr" }}
+          l={{ cols: "1fr 2fr" }}
         >
           <Container centerContent m={{ gridRow: 2 }} l={{ gridRow: "unset" }}>
             <Container
