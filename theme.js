@@ -76,6 +76,7 @@ const gray500 = "#4c4948";
 const gray600 = "#312f2f";
 const black = "#000000";
 const yellow = "#F7B31F";
+const purple = "#83258e";
 
 const colors = {
   main,
@@ -90,7 +91,8 @@ const colors = {
   gray500,
   gray600,
   black,
-  yellow
+  yellow,
+  purple
 };
 
 const shadows = {

@@ -53,7 +53,7 @@ const Home = ({ theme }) => {
 
   const bgColor =
     isSectionOneInView && !isSectionTwoInView
-      ? theme.colors.yellow
+      ? theme.colors.purple
       : isSectionTwoInView
       ? theme.colors.black
       : theme.colors.black;
@@ -89,8 +89,7 @@ const Home = ({ theme }) => {
           fullPage
           centerContent
           bgPosition="bottom"
-          m={{ bgImage: "/background-no-center-dots.svg", bgSize: "contain" }}
-          l={{ bgImage: "/background.svg", bgSize: "cover" }}
+          bgImage="/background.svg"
         >
           <Content>
             <AnimationContainer ref={introRef} />
